@@ -1,0 +1,479 @@
+<style>
+:root {
+  --color-white: #f3f3f3;
+  --color-darkblue: #1b1b32;
+  --color-degrade: linear-gradient(90deg, rgba(247,125,125,0.6) 0%, rgba(89,172,255,0.6) 100%);
+  --color-green: #159617;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color-white);
+  margin: 0;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-darkblue);
+  background-image: linear-gradient(
+      130deg,
+      rgba(200, 68, 200, 0.65),
+      rgba(91, 83, 227, 0.65)
+    ),
+    url(https://www.napratica.org.br/wp-content/uploads/2017/07/destaque-videogame.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h1 {
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 1.125rem;
+  font-family: 
+}
+
+h1,
+p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  border: none;
+}
+
+.container {
+  width: 100%;
+  margin: 3.125rem auto 0 auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+.header {
+  padding: 0 0.625rem;
+  margin-bottom: 1.875rem;
+}
+
+.description {
+  font-style: italic;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.clue {
+  margin-left: 0.25rem;
+  font-size: 0.9rem;
+  color: #e4e4e4;
+}
+
+.text-center {
+  text-align: center;
+}
+
+form {
+  background: var(--color-degrade);
+  padding: 2.5rem 0.625rem;
+  border-radius: 50px;
+}
+
+@media (min-width: 480px) {
+  form {
+    padding: 2.5rem;
+  }
+}
+
+.form-group {
+  margin: 0 auto 1.25rem auto;
+  padding: 2px;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 45px;
+  padding: 0.375rem 0.75rem;
+  color: #495057;
+  background-color: #ffffff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 7px;
+  min-height: 20px;
+  min-width: 20px;
+}
+
+.input-textarea {
+  min-height: 120px;
+  width: 100%;
+  padding: 0.625rem;
+  resize: vertical;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--color-green);
+  color: inherit;
+  border-radius: 10px;
+  cursor: pointer;
+}
+</style>
+
+<html>
+<div class="container">
+  <header class="header">
+    <h1 id="title" class="text-center">Games Survey Form</h1>
+
+    <p id="description" class="description text-center">
+      A quick survey about our company's games. Thank you for helping us to always be improving.
+    </p>
+  </header>
+  
+  <form id="survey-form">
+    
+    
+    <div class="form-group">
+      <label id="name-label" for="name">Name</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        class="form-control"
+        placeholder="Enter your name"
+        required
+      />
+    </div>
+    
+    
+    <div class="form-group">
+      <label id="email-label" for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="form-control"
+        placeholder="Enter your Email"
+        required
+      />
+    </div>
+    
+    
+    <div class="form-group">
+      <label id="number-label" for="number"
+        >Age<span class="clue"></span></label
+      >
+      <input
+        type="number"
+        name="age"
+        id="number"
+        min="5"
+        max="99"
+        class="form-control"
+        placeholder="Enter Your Age"
+      />
+    </div>
+    
+    
+    <div class="form-group">
+      <p>Select the option that best fits the frequency with which you play video games</p>
+      <select id="dropdown" name="role" class="form-control" required>
+        <option disabled selected value>Select an option...</option>
+        <option value="Once a day">Once a day</option>
+        <option value="Once a week">Once a week</option>
+        <option value="Once a month">Once a month</option>
+        <option value="More than once a day every day">More than once a day every day</option>
+        <option value="More than once a week">More than once a week</option>
+        <option value="Only weekends">Only weekends</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    
+    <div class="form-group">
+      <p>
+        How do you prefer to buy games?
+      </p>
+      <select id="most-like" name="mostLike" class="form-control" required>
+        <option disabled selected value>Select an option</option>
+        <option value="Physical Store">I prefer to buy in physical store</option>
+        <option value="Online Store">I prefer to buy in online store</option>
+        <option value="Both">Both</option>
+      </select>
+    </div>
+    
+    
+<div class="form-group">
+      <p>
+        Which platform do you prefer to play??
+      </p>
+      <select id="most-like" name="mostLike" class="form-control" required>
+        <option disabled selected value>Select an option</option>
+        <option value="PC">PC</option>
+        <option value="Console">Console</option>
+        <option value="I don't have a preference">I don't have a preference</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+    
+    
+    
+    <div class="form-group">
+      <p>
+        Which of these following genres do you like to play? </p>
+
+      <label
+        ><input
+          name="prefer"
+          value="front-end-projects"
+          type="checkbox"
+          class="input-checkbox"
+        />FPS Games</label
+      >
+      <label>
+        <input
+          name="prefer"
+          value="back-end-projects"
+          type="checkbox"
+          class="input-checkbox"
+        />Action Games</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="data-visualization"
+          type="checkbox"
+          class="input-checkbox"
+        />Arcade Games</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="challenges"
+          type="checkbox"
+          class="input-checkbox"
+        />Simulation Games</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="open-source-community"
+          type="checkbox"
+          class="input-checkbox"
+        />Adventure Games</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="gitter-help-rooms"
+          type="checkbox"
+          class="input-checkbox"
+        />RPG Games</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="videos"
+          type="checkbox"
+          class="input-checkbox"
+        />Strategy Games</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="city-meetups"
+          type="checkbox"
+          class="input-checkbox"
+        />MMO Games</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="wiki"
+          type="checkbox"
+          class="input-checkbox"
+        />Competitive Games</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="forum"
+          type="checkbox"
+          class="input-checkbox"
+        />Survive Games</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="additional-courses"
+          type="checkbox"
+          class="input-checkbox"
+        />Sandbox Games</label
+      >
+    </div>
+
+    
+    <div class="form-group">
+      <p>How would you rate our service and games?</p>
+      <select id="dropdown" name="role" class="form-control" required>
+        <option disabled selected value>Choose your rate...</option>
+        <option value="0">0 (Terrible)</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Reasonable)</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10 (Excellent)</option>
+      </select>
+    </div>
+    
+    
+    <div class="form-group">
+      <p>Would you recommend our games to a friend?</p>
+      <label>
+        <input
+          name="user-recommend"
+          value="definitely"
+          type="radio"
+          class="input-radio"
+          checked
+        />Certainly</label
+      >
+      <label
+        ><input
+          name="user-recommend"
+          value="not-sure"
+          type="radio"
+          class="input-radio"
+        />Probably</label
+      >
+      <label>
+        <input
+          name="user-recommend"
+          value="maybe"
+          type="radio"
+          class="input-radio"
+        />Maybe</label
+      >
+      <label
+        ><input
+          name="user-recommend"
+          value="not-sure"
+          type="radio"
+          class="input-radio"
+        />Probably Not</label
+      >
+      <label
+        ><input
+          name="user-recommend"
+          value="not-sure"
+          type="radio"
+          class="input-radio"
+        />Not sure</label
+      >
+    </div>
+    
+    
+    <div class="form-group">
+      <p>About your rate, how we can improve our service?</p>
+      <textarea
+        id="comments"
+        class="input-textarea"
+        name="comment"
+        placeholder="Enter your comment here..."
+      ></textarea>
+    </div>
+    
+    
+    <div class="form-group">
+      <p>Tell us about the things you love about games</p>
+      <textarea
+        id="comments"
+        class="input-textarea"
+        name="comment"
+        placeholder="Enter your comment here..."
+      ></textarea>
+    </div>
+    
+    
+    <div class="form-group">
+      <p>And finally tell us what is your favorite game and why is it your favorite game, what are the dynamics that make it a good game?</p>
+      <textarea
+        id="comments"
+        class="input-textarea"
+        name="comment"
+        placeholder="Enter your comment here..."
+      ></textarea>
+    </div>
+
+    
+    <div class="form-group">
+      <button type="submit" id="submit" class="submit-button">
+        <strong>Submit</strong>
+      </button>
+    </div>
+  </form>
+</div>
+</html>
