@@ -1,0 +1,525 @@
+<style>
+
+* {
+  margin: 0;
+  padding: 0px 0px 0px 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ba9c9c;
+  font-family: 'Lato', sans-serif;
+}
+
+#header-img {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%
+  
+}
+
+.logo {
+  width: 160px;
+}
+
+@media (max-width: 650px) {
+  .logo {
+    margin-top: 5px;
+    width: 100%;
+    position: relative;
+  }
+}
+
+.logo > img {
+  width: 100%;
+  height: 100%;
+  max-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 5px;
+}
+
+@media (max-width: 200px) {
+  .logo > img {
+    margin: 0 auto;
+  }
+}
+
+#store-name {
+  font-family: times new roman;
+  font-size: 35px;
+}
+
+
+#page-wrapper {
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  
+}
+
+/** Classes Globais **/
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  background:linear-gradient(90deg, rgba(201,201,204,1) 0%, rgba(194,180,180,1) 100%); ;
+}
+
+.btn {
+  padding: 0px 20px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 15px black solid;
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+  color: #000;
+}
+
+.grid {
+  display: flex;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  min-height: 75px;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #babac2;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+  }
+}
+
+nav {
+  font-weight: 400;
+}
+
+#nav-bar > ul{
+  display: grid;
+  grid-template-columns: 7% 7% 5% 7% 3% 6%;
+  align-items: center;
+}
+
+.nav-link{
+  font-family: monospace;
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  padding-bottom: 20px 20px 20px 20px;
+}
+
+@media (max-width: 650px) {
+  nav {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+  }
+  
+  
+  nav li {
+    padding-bottom: 5px;
+  }
+}
+
+nav > ul {
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+@media (max-width: 650px) {
+  nav > ul {
+    flex-direction: column;
+  }
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 330px;
+  margin-top: 50px;
+  background: linear-gradient(90deg, rgba(201,201,204,1) 0%, rgba(194,180,180,1) 100%);
+}
+
+#hero > h2 {
+  font-size: 35px;
+  font-family: monospace;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+
+#hero input[type='email'] {
+  max-width: 275px;
+  width: 100%;
+  padding: 5px;
+}
+
+#hero input[type='submit'] {
+  max-width: 140px;
+  width: 100%;
+  height: 30px;
+  margin: 12px 0;
+  border: 0;
+  background-color: rgba(245,240,112,0.7);
+}
+
+#hero input[type='submit']:hover {
+  background-color: yellow;
+  transition: background-color 1.2s;
+}
+
+@media (max-width: 650px) {
+  #hero {
+    margin-top: 120px;
+  }
+}
+
+#specs {
+  width: 125px;
+  height: 125px;
+  border-radius: 40%;
+  padding: 0px 10px 0px -10px;  
+  
+}
+
+#features {
+  margin-top: 30px;
+}
+
+#features .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 20vw;
+  color: ;
+}
+
+
+
+@media (max-width: 550px) {
+  #features .icon {
+    display: none;
+  }
+}
+
+#features .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 125px;
+  width: 80vw;
+  padding: 5px;
+  line-height: 30px;
+}
+
+@media (max-width: 550px) {
+  #features .desc {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    height: 150px;
+  }
+}
+
+@media (max-width: 650px) {
+  #features {
+    margin-top: 0;
+  }
+}
+
+#how-it-works {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#how-it-works > iframe {
+  max-width: 560px;
+  width: 100%;
+}
+
+#pricing {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 3);
+  margin: 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+.product > .level {
+  background-color: #ddd;
+  color: black;
+  padding: 15px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.product > h2 {
+  margin-top: 15px;
+}
+
+.product > ol {
+  margin: 15px 0;
+}
+
+.product > ol > li {
+  padding: 5px 0;
+}
+
+.product > button {
+  border: 0;
+  margin: 15px 0;
+  background-color: #f1c40f;
+  font-weight: 400;
+}
+
+.product > button:hover {
+  background-color: orange;
+  transition: background-color 1s;
+}
+
+@media (max-width: 800px) {
+  #pricing {
+    flex-direction: column;
+  }
+  .product {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
+
+footer {
+  margin-top: 30px;
+  background-color: #ba9c9c;
+  padding: 20px;
+}
+
+footer > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer > ul > li {
+  padding: 0 10px;
+}
+
+footer > span {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  color: #444;
+}
+</style>
+
+<html>
+  <body>
+    <!-- Parte de Cima, com imagem da empresa e links no cabeçalho -->
+    <div>
+      <header id="header">
+        <div class="logo">  
+          <img id="header-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9_QQAFfgYTNfHlTBRLARS5rZTlEQ_l3qjlg&usqp=CAU">
+        </div>
+        
+        <div id="store-name" >World of Technology</div>
+        
+        <div>
+        <nav id="nav-bar"> 
+          <ul>
+            <li><a class="nav-link" href="#features">Security Shipping</a></li>
+            <li><a class="nav-link" href="#features">Fast Shipping</a></li>
+            <li><a class="nav-link" href="#features">Quality</a></li>
+            <li><a class="nav-link" href="#features">Fidelity</a></li>
+            <li><a class="nav-link" href="#how-it-works">Video</a></li>
+            <li><a class="nav-link" href="#pricing">Products</a></li>
+          </ul>
+        </nav>
+        </div>
+      </header>
+    </div>
+  </header>
+
+  <!-- Título e Forms-->
+  
+  <div class="container"></div>
+
+  <section id="hero">
+    <h2>Pre-Assembled Computers and Hardware Parts</h2>
+    <form id="form" action=" https://www.reecodecamp.com/email-enviar">
+      <input
+        name="email"
+        id="email"
+        type="email"
+        placeholder="Enter your email address"
+        required
+      />
+      
+  
+      <input id="submit" type="submit" value="Submit" class="btn" />
+    </form>
+    
+  </section>
+
+  
+  
+  <!-- Texto Principal-->
+  
+  <div class="container">
+    <section id="features">
+      <div class="grid">
+        <div class="icon"><i class="Cadeado"> <img id="specs" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9azc15VLGfJSP_KFLlpnTA6psQT9KQ1JhSQ&usqp=CAU">
+        </i></div>
+        <div class="desc">
+          <h2>Security Shipping</h2>
+          <p>
+            We guarantee security with your ordered product, we guarantee the safest possible delivery to your home. And any disappointment with our delivery, just contact us at support and we will give you free shipping.
+          </p>
+        </div>
+      </div>
+      
+      
+      <div class="grid">
+        <div class="icon"><i class="Caminhão Rápido"> <img id="specs" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAimqgsC9RkfsTdfrJ6D75NhteXLqdtLKBMA&usqp=CAU"></i></div>
+        <div class="desc">
+          <h2>Fast Shipping</h2>
+          <p>
+            In addition to security, we carry out deliveries at a much higher speed, with the right to object tracking.
+          </p>
+        </div>
+      </div>
+      
+      
+      <div class="grid">
+        <div class="icon">
+          <i class="Selo Qualidade" aria-hidden="true"><img id="specs" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrpHUS7RNW1Y6MsSQSKIzlpku6nyJ_cv5lvg&usqp=CAU"></i>
+ </div>
+        <div class="desc">
+          <h2>Quality Assurance</h2>
+          <p>
+            We guarantee a high quality product and great quality hardware. We have the national quality seal. Both hardware units and assembled computers are extremely selected.
+          </p>
+        </div>
+      </div>
+      
+      <div class="grid">
+        <div class="icon">
+          <i class="Coração" aria-hidden="true"> <img id="specs" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMEbLiUQnMwtyaTPuD1OMKNyHRa7N3x5Xa4Q&usqp=CAU"></i>
+        </div>
+        <div class="desc">
+          <h2>Fidelity</h2>
+          <p>
+            If you make more than 3 purchases through our site in a period of 3 months, the fourth purchase will have a 10% discount with free shipping
+          </p>
+        </div>
+      </div>
+      
+      
+    </section>
+    
+    <!-- Video -->
+    
+    <section id="how-it-works">
+      <iframe id="video"
+        <iframe width="1225" height="300" src="https://www.youtube.com/embed/UrZZoDw9Yfg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+    
+    
+    <!-- Produtos -->
+    
+    
+    <section id="pricing">
+      <div class="product" id="tenor">
+        <div class="level">Basic Computer</div>
+        <h2>$200</h2>
+        <ol>
+          <li><img id="specs" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvqXbATUMZSQJ5MD2wuV-_rbHfD39G0dE4LQ&usqp=CAU"></i></li>
+          <li>* AMD FX-8150</li>
+          <li>* ATI Radeon HD 2600 PRO</li>
+          <li>* HD 500GB</li>
+          <li>* 4GB DDR3 Memory</li>
+        </ol>
+        <button class="btn">Buy</button>
+      </div>
+      
+      
+      
+      <div class="product" id="bass">
+        <div class="level">Casual Computer</div>
+        <h2>$400</h2>
+        <ol>
+          <li><img id="specs" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnpa99SDn7jTB-praaJF2GGCmjutNNL2g2rw&usqp=CAU"></li>
+          <li>* AMD Ryzen 5 3500X</li>
+          <li>* AMD Radeon HD Pro W5500M</li>
+          <li>* SSD 500GB</li>
+          <li>* 8GB DDR4 Memory.</li>
+        </ol>
+        <button class="btn">Buy</button>
+      </div>
+      
+      
+      <div class="product" id="valve">
+        <div class="level">Gamer Computer</div>
+        <h2>$1150</h2>
+        <ol>
+          <li><img id="specs" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx1pyUSYKPTPnDklfxXmyRRBK5IX7t1K_V0g&usqp=CAU"></li>
+          <li>* AMD Ryzen 7 5800X</li>
+          <li>* AMD Radeon Pro Vega 56</li>
+          <li>* SSD 1TB</li>
+          <li>* 16GB DDR4 Memory</li>
+        </ol>
+        <button class="btn">Buy</button>
+      </div>
+    </section>
+    <footer>
+      <ul>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <span>Copyright 2021, World of Technology</span>
+    </footer>
+  </div>
+</div>
+  </body>
+    </html>
