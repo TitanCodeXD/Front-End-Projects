@@ -1,0 +1,426 @@
+<style>
+html,
+body {
+  min-width: 290px;
+  color: #4d4e53;
+  background-color: #dfdada;
+  font-family: 'Open Sans', Arial, sans-serif;
+  line-height: 1.7;
+}
+
+#navbar {
+  position: fixed;
+  min-width: 150px;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 100%;
+  border-right: groove;
+  border-color: rgba(0, 22, 22, 0.8);
+  background: #d0cccc;
+}
+
+header {
+  color: black;
+  margin: 10px;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: thin;
+}
+
+h2 {
+  font-size: 20px;
+  
+}
+
+#code {
+  width: 85px;
+}
+
+#code2 {
+  width: 35px;
+}
+
+#code3 {
+  width: 80px;
+}
+
+#code4 {
+  width: 143px;
+}
+
+#code5 {
+  width: 85px;
+}
+
+#image {
+  width: 400px;
+  height: 360px;
+  display: block;
+    margin-left: auto;
+    margin-right: auto
+  
+}
+
+#main-doc header {
+  text-align: left;
+  margin: 0px;
+}
+
+#navbar ul {
+  height: 90%;
+  padding: 0px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar li {
+  color: #4d4e53;
+  border-top: 3.5px solid;
+  border-left: 1px solid;
+  border-color: black;
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: #4d4e53;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#main-doc {
+  position: absolute;
+  margin-left: 310px;
+  padding: 20px;
+  margin-bottom: 110px;
+}
+
+section article {
+  color: #4d4e53;
+  margin: 15px;
+  font-size: 0.96em;
+}
+
+section li {
+  margin: 15px 0px 0px 20px;
+}
+
+code {
+  display: block;
+  text-align: left;
+  white-space: pre-line;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 815px) {
+  /* For mobile phones: */
+  #navbar ul {
+    border: 1px solid;
+    height: 207px;
+  }
+
+  #navbar {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    z-index: 1;
+    border-bottom: 2px solid;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 270px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #main-doc {
+    margin-left: -10px;
+  }
+
+  code {
+    margin-left: -20px;
+    width: 100%;
+    padding: 15px;
+    padding-left: 10px;
+    padding-right: 45px;
+    min-width: 233px;
+  }
+}
+</style>
+
+
+<html>
+  <body>
+
+<nav id="navbar">
+  <header><strong>CSS Documentation</strong></header>
+  
+  <ul>
+    <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+    <li>
+      <a class="nav-link" href="#Basic_Structure"
+        >Basic Structure</a>
+        </li>
+    
+    <li>
+      <a class="nav-link" href="#Selecting_Multiple_Elements">Selecting Multiple Elements</a>
+    </li>
+    
+    <li><a class="nav-link" href="#Diferent_Types_of_Selectors">Diferent Types of Selectors</a></li>
+    
+    <li><a class="nav-link" href="#Fonts_and_Text">Fonts and Text</a></li>
+    <li>
+      <a class="nav-link" href="#Boxes">Boxes</a>
+    </li>
+    
+    <li><a class="nav-link" href="#Changing_the_Page_Color">Changing the Page Color</a></li>
+    
+    <li><a class="nav-link" href="#Styling_the_Body">Styling the Body</a></li>
+    
+    <li><a class="nav-link" href="#Positioning_and_Styling_the_main_page_title">Positioning and Styling the main page title</a></li>
+    
+    <li><a class="nav-link" href="#Centering_the_image">Centering the image</a></li>
+    
+    <li><a class="nav-link" href="#Reference">Reference</a></li>
+  </ul>
+</nav>
+    
+    
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header>Introduction</header>
+    <article>
+      <p>
+        CSS means Cascading Style Sheets. It's a way of styling code created by languages like HTML, XML or XHTML, for example. In a practical way, it works as a personalization layer to the visible content.
+      </p>
+
+      <p> These types of languages mentioned were designed to be functional and, as they are markup, they needed to be improved. It was created because HTML was not capable of understanding all the needs a programmer had to create standards for formatting on pages. CSS, in this case, came as a good solution to improve the aesthetics of websites. For example:
+        <code id="code"> p {
+          color: red;
+          }
+        </code>
+      </p>
+      <p> Some of the properties it allows are:</p>
+      <ul>
+        <li>
+          Maintain a standard formatting in different browsers;
+        </li>
+        <li>
+          Single-sheet layout control;
+        </li>
+        <li>
+          Creating formats with more responsive designs, thinking about usability and user experience. 
+        </li>
+      </ul>
+    </article>
+  </section>
+  
+
+  
+  
+  <section class="main-section" id="Basic_Structure">
+    <header>Basic Structure</header>
+    <article>
+      <p>The whole structure is called a ruleset. (The term ruleset is often referred to as just rule.) Note the names of the individual parts:</p>
+
+      <h2>Selector</h2>
+      <p>This is the HTML element name at the start of the ruleset. It defines the element(s) to be styled (in this example,<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p" target=_blanck><code id="code2">< p ></code> </a>elements). To style a different element, change the selector.</p>
+      
+      <h2>Declaration</h2>
+        <p>This is a single rule like <code id="code3">color: red;</code>. It specifies which of the element's <strong>properties</strong> you want to style.</p>
+      
+      <h2>Properties</h2>
+        <p>These are ways in which you can style an HTML element. (In this example, 'color' is a property of the "< p >" elements.) In CSS, you choose which properties you want to affect in the rule.</p>
+      
+      <h2>Property Value</h2>
+        <p>To the right of the property—after the colon—there is the property value. This chooses one out of many possible appearances for a given property. (For example, there are many color values in addition to red.)</p>
+      <p>Note the other important parts of the syntax:</p>
+      <ul>
+        <li>Apart from the selector, each ruleset must be wrapped in curly braces. ({})</li>
+        
+        <li>Within each declaration, you must use a colon (:) to separate the property from its value or values.</li>
+        
+        <li>Within each ruleset, you must use a semicolon (;) to separate each declaration from the next one.</li></ul>
+        <p>To modify multiple property values in one ruleset, write them separated by semicolons, like this:<code id="code4">p {
+  color: red;
+  width: 500px;
+  border: 1px solid black;
+          }</code></p>
+    </article>
+  </section>
+  
+  
+  
+  <section class="main-section" id="Selecting_Multiple_Elements">
+    <header>Selecting Multiple Elements</header>
+    <article>
+      <p> You can also select multiple elements and apply a single ruleset to all of them. Separate multiple selectors by commas. For example: <code id="code5">p, li, h1 {
+  color: red;
+}</code></p>
+    </article>
+  </section>
+    
+    
+    
+  <section class="main-section" id="Diferent_Types_of_Selectors">
+    <header>Diferent Types of Selectors</header>
+    <article>
+      There are many different types of selectors. The examples above use element selectors, which select all elements of a given type. But we can make more specific selections as well. Here are some of the more common types of selectors:
+  <ul>
+    <li> Element Selector</li>
+      <p>All HTML elements of the specified type.</p>
+    
+    <li> ID Selector</li>
+      <p>The element on the page with the specified ID. On a given HTML page, each id value should be unique.</p>
+    
+    <li> Class Selector</li>
+      <p>The element(s) on the page with the specified class. Multiple instances of the same class can appear on a page.</p>
+    
+    <li> Attribute Selector</li>
+      <p>The element(s) on the page with the specified attribute.</p>
+    
+    <li> Pseudo-Class Selector</li>
+      <p>The specified element(s), but only when in the specified state. (For example, when a cursor hovers over a link.)</p>
+    </article>
+  </section>
+    
+    
+    
+    
+    
+  <section class="main-section" id="Fonts_and_Text">
+    <header>Fonts and Text</header>
+    <p>Text fonts and formatting add a lot to a website and add a lot to the aesthetics. Some commands: font-family, font-style
+      ,font-variant, font-weight, font-size, text-align, line-height and letter-spacing. Example:<code id="code4">h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+p, li {
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 1px;
+}</code></p>
+  </section>
+    
+    
+    
+  <section class="main-section" id="Boxes">
+    <header>Boxes</header>
+    <article>
+      CSS layout is mostly based on the box model. Each box taking up space on your page has properties like:
+      <ul>
+        <li>padding, the space around the content. In the example below, it is the space around the paragraph text.    </li>
+        
+        <li>border, the solid line that is just outside the padding.</li>
+        
+        <li>margin, the space around the outside of the border</li>
+        <br>
+        <img id="image" src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/box-model.png"
+      alt="image demonstrating padding, border and margin"
+    />
+    </article>
+  </section>
+    
+    
+    
+    
+  <section class="main-section" id="Changing_the_Page_Color">
+    <header>Changing the Page Color</header>
+    <article>
+      <p>you can change the background color and give your page a more attractive look:<code id = "code4">html {
+  background-color: #00539F;
+}</code> </p>
+</article>
+  </section>
+    
+    
+    
+  <section class="main-section" id="Styling_the_Body">
+    <header>Styling the Body</header>
+    <article>
+      <p>
+        You shape the body of your site using for example: width, margin, background-color, padding, border. <code id = "code4">body {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #FF9500;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}</code></p>
+</article>
+  </section>
+    
+    
+    
+    
+  <section class="main-section" id="Positioning_and_Styling_the_main_page_title">
+    <header>Positioning and Styling the main page title</header>
+    <article>
+      <p>first margin 0 to avoid gaps, one padding, color and text-shadow (where first pixel is horizontal offset, second vertical offset, third blur radius and fourth is color)<code id ="code4">h1 {
+  margin: 0;
+  padding: 20px 0;
+  color: #00539F;
+  text-shadow: 3px 3px 1px black;
+}
+ </code> </p> 
+    </article>
+  </section>
+    
+    
+    
+  <section class="main-section" id="Centering_the_image">
+    <header>Centering the image</header>
+    <article>
+      <p> We center the image to make it look better. We could use the margin: 0 auto trick again as we did for the body. But there are differences that require an additional setting to make the CSS work.</p>
+      <p>The < body > is a block element, meaning it takes up space on the page. The margin applied to a block element will be respected by other elements on the page. In contrast, images are inline elements, for the auto margin trick to work on this image, we must give it block-level behavior using display: block;.<code id="code4">img {
+  display: block;
+  margin: 0 auto;
+}</code></p>
+      
+        
+    </article>
+  </section>
+  
+    
+    </article>
+  </s>
+  <section class="main-section" id="Reference">
+    <header>Reference</header>
+    <article>
+      <ul>
+        <li>
+          All the documentation in this page is taken from
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics"
+            target="_blank"
+            >MDN CSS Basics</a
+          > and <a
+            href="https://br.godaddy.com/blog/border-css-estilos-de-borda-para-usar-no-seu-site/"
+            target="_blank"
+            >GoDaddy Brasil</a> 
+        </li>
+      </ul>
+    </article>
+  </section>
+</main>
+  </body>
+</html>
+
